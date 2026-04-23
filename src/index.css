@@ -1,0 +1,75 @@
+/* src/index.css */
+:root {
+  --bg:      #0A0F1E;
+  --bg2:     #0F1628;
+  --bg3:     #141E35;
+  --bg4:     #1A2540;
+  --blue:    #3B7BFF;
+  --blue2:   #5A94FF;
+  --teal:    #00C9A7;
+  --amber:   #F5A623;
+  --red:     #FF5C5C;
+  --green:   #22C55E;
+  --purple:  #A78BFA;
+  --text:    #EDF2FF;
+  --text2:   #8FA0C0;
+  --text3:   #3D5070;
+  --border:  rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.11);
+  --border3: rgba(59,123,255,0.35);
+  --card:    rgba(15,22,40,0.95);
+  --input:   rgba(10,15,30,0.9);
+  --r:       10px;
+  --r2:      14px;
+  --r3:      20px;
+  --font:    'Sora', sans-serif;
+  --mono:    'JetBrains Mono', monospace;
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { height: 100%; overflow: hidden; }
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+#root { height: 100%; display: flex; flex-direction: column; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 2px; height: 2px; }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 2px; }
+
+/* form elements */
+input, select, textarea, button { font-family: var(--font); outline: none; }
+input, select, textarea {
+  font-size: 14px; color: var(--text);
+  background: var(--input); border: 1px solid var(--border2);
+  border-radius: var(--r); padding: 10px 13px; width: 100%;
+  transition: all 0.15s; -webkit-appearance: none; appearance: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+  background: rgba(59,123,255,0.05);
+  box-shadow: 0 0 0 3px rgba(59,123,255,0.1);
+}
+input::placeholder { color: var(--text3); }
+select option { background: var(--bg2); color: var(--text); }
+textarea { resize: vertical; min-height: 72px; line-height: 1.6; }
+
+/* animations */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes slideUp  { from { transform:translateY(100%); } to { transform:translateY(0); } }
+@keyframes pulse    { 0%,100%{opacity:1;} 50%{opacity:0.5;} }
+@keyframes spin     { to { transform: rotate(360deg); } }
+
+.fade-up  { animation: fadeUp  0.2s ease both; }
+.fade-in  { animation: fadeIn  0.15s ease both; }
+.slide-up { animation: slideUp 0.28s cubic-bezier(0.32,0.72,0,1) both; }
