@@ -1,4 +1,4 @@
-# 🚗 DriveTrack Pro v2.0 — Driving Institute Management System
+# DriveTrack — Driving Institute Management System
 
 A fully mobile-first Progressive Web App (PWA) with real-time sync, multi-admin login, auto schedule generation, instructor management, and attendance tracking.
 
