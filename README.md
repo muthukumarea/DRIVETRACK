@@ -1,4 +1,4 @@
-#  DriveTrack Pro — Real-Time Driving Institute Management System
+#  DriveTrack — Real-Time Driving Institute Management System
 
 A mobile-first **Progressive Web App (PWA)** built with React and Firebase to manage driving institute operations including scheduling, attendance tracking, and multi-admin coordination in real time.
 
@@ -6,7 +6,7 @@ A mobile-first **Progressive Web App (PWA)** built with React and Firebase to ma
 
 ##  Live Demo
 
-👉 [https://drivetrack-53ab7.web.app/)
+👉 [https://ekrds.web.app/]
 
 ---
 
